@@ -1,11 +1,12 @@
 require "pry"
 require "active_record"
 
-# Setup a database connection
-ActiveRecord::Base.establish_connection(
+# Setting up a Database connection
+Activerecord::Base.establish_connection(
   adapter: "sqlite3",
   database: "db/students.sqlite"
 )
+# Once 'establish_connection is run, ActiveRecord::Base keeps it stored as a class variable at ActiveRecord::Base.connection'
 
 # Create a Students table
 sql = <<-SQL
