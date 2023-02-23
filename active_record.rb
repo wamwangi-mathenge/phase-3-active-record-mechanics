@@ -21,6 +21,8 @@ ActiveRecord::Base.connection.execute(sql)
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 
 # Have the Student class inherit from ActiveRecord::Base
+# Link a 'Student' model to the 'students' Database Table
+# This is managed through 'Class Inheritance'
 class Student < ActiveRecord::Base
 end
 
