@@ -2,7 +2,7 @@ require "pry"
 require "active_record"
 
 # Setting up a Database connection
-Activerecord::Base.establish_connection(
+ActiveRecord::Base.establish_connection(
   adapter: "sqlite3",
   database: "db/students.sqlite"
 )
@@ -28,3 +28,5 @@ end
 
 binding.pry
 ""
+
+# When using Active Record, our class names are singular and table names are plural
